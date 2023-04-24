@@ -31,7 +31,7 @@ jobs:
       - name: run docker compose down
         run: docker compose down
       - name: Delete react_volumes
-        run: if docker volume ls --quiet --filter name=password-generator_react-volume | grep -q .; then docker volume rm password-generator_react-volume; fi
+        run: if docker volume ls --quiet --filter name=aws-fullstack_react-volume | grep -q .; then docker volume rm aws-fullstack_react-volume; fi
       - name: Build images
         run: docker compose build
       - name: Run docker compose up
